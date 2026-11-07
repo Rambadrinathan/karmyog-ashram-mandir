@@ -2,190 +2,290 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light">
-  <meta name="theme-color" content="#1a100e">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#140305">
   <title>Kali Puja 2026 | KarmYog Ashram and Mandir</title>
-  <meta name="description" content="Kali Puja 2026 at KarmYog Ashram and Mandir, Kolkata. Offer a seva, then complete it by UPI.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%239d1c16'/%3E%3C/svg%3E">
+  <meta name="description" content="Kali Puja 2026 at KarmYog Ashram and Mandir, Kolkata. Choose a seva and offer it by UPI.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%23c4261c'/%3E%3C/svg%3E">
+  <link rel="preload" href="images/kali-puja-bg.jpg" as="image">
   <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-  <a class="skip" href="#catalogue">Skip to sevas</a>
-  <header>
+  <canvas id="smoke" aria-hidden="true"></canvas>
+  <div class="smoke-veil" aria-hidden="true"></div>
+
+  <a class="skip" href="#sevas">Skip to sevas</a>
+
+  <header class="site-header">
     <div class="wrap">
-      <div class="brand">
+      <a class="brand" href="#top">
         <strong>KarmYog Ashram and Mandir</strong>
-        <span>Kali Puja 2026</span>
-      </div>
-      <a class="btn btn-ghost" href="#pay">The QR</a>
+        <span>Kali Puja 2026 · কালী পূজা</span>
+      </a>
+      <nav class="head-actions" aria-label="Page">
+        <a class="btn btn-ghost btn-sm" href="#sevas">Sevas</a>
+        <a class="btn btn-sm btn-glow" href="#pay">Offer</a>
+      </nav>
     </div>
   </header>
 
-  <section class="hero">
-    <img src="assets/temple-maa.jpg" width="1223" height="912" alt="Maa Kali at KarmYog Ashram and Mandir.">
-    <div class="hero-scrim">
-      <div class="wrap">
+  <section class="hero" id="top">
+    <div class="hero-photo">
+      <img src="images/kali-puja-bg.jpg" width="1223" height="912" alt="Maa Kali at KarmYog Ashram and Mandir." fetchpriority="high">
+    </div>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
         <p class="tagline">An offering of devotion, faith and togetherness</p>
-        <h1>Kali Puja</h1>
-        <p class="lede">Sunday, 8 November 2026. KarmYog Ashram and Mandir, Kolkata.</p>
-        <div class="hero-actions">
-          <a class="btn" href="#catalogue">The sevas</a>
-        </div>
+        <h1>
+          <span class="h1-en">Kali Puja</span>
+          <span class="h1-bn" lang="bn">কালী পূজা</span>
+        </h1>
+        <p class="lede"><time datetime="2026-11-08">Sunday, 8 November 2026</time><span class="dot" aria-hidden="true"></span>KarmYog Ashram and Mandir, Kolkata</p>
       </div>
+
+      <nav class="wheel" id="sevas" aria-label="Choose a seva">
+        <div class="wheel-orbit" aria-hidden="true">
+          <svg viewBox="0 0 200 200" class="mandala">
+            <circle cx="100" cy="100" r="96" />
+            <circle cx="100" cy="100" r="88" class="dash" />
+            <circle cx="100" cy="100" r="56" class="dash fine" />
+          </svg>
+          <span class="spark"></span>
+        </div>
+        <div class="wheel-core">
+          <span class="core-bn" lang="bn">সেবা</span>
+          <strong>Choose a seva</strong>
+          <small>Tap a circle</small>
+        </div>
+        <ul class="wheel-nodes" style="--n:8">
+          <li style="--i:0"><a class="node" href="#bhog"><span class="node-img"><img src="assets/scene-bhog.jpg" alt="" width="1074" height="749"></span><span class="node-label">Bhog</span></a></li>
+          <li style="--i:1"><a class="node" href="#pratima"><span class="node-img"><img src="assets/temple-pratima.jpg" alt="" width="1140" height="1127"></span><span class="node-label">Pratima</span></a></li>
+          <li style="--i:2"><a class="node" href="#pandal"><span class="node-img"><img src="assets/temple-night.jpg" alt="" width="1280" height="960"></span><span class="node-label">Pandal</span></a></li>
+          <li style="--i:3"><a class="node" href="#plants"><span class="node-img"><img src="assets/scene-plants.jpg" alt="" width="1074" height="749"></span><span class="node-label">Plants</span></a></li>
+          <li style="--i:4"><a class="node" href="#purohit"><span class="node-img"><img src="assets/scene-purohit.jpg" alt="" width="1074" height="749"></span><span class="node-label">Purohit</span></a></li>
+          <li style="--i:5"><a class="node" href="#flowers"><span class="node-img"><img src="assets/scene-flowers.jpg" alt="" width="1074" height="749"></span><span class="node-label">Pushpanjali</span></a></li>
+          <li style="--i:6"><a class="node" href="#diya"><span class="node-img"><img src="assets/scene-diyas.jpg" alt="" width="1074" height="749"></span><span class="node-label">Deepdaan</span></a></li>
+          <li style="--i:7"><a class="node" href="#decor"><span class="node-img"><img src="assets/scene-decor.jpg" alt="" width="1074" height="749"></span><span class="node-label">Decor</span></a></li>
+        </ul>
+      </nav>
     </div>
   </section>
 
-  <nav class="jumps" id="catalogue" aria-label="Sevas">
-    <div class="wrap jumps-row">
-      <a href="#bhog">Bhog</a>
-      <a href="#pratima">Pratima</a>
-      <a href="#pandal">Pandal</a>
-      <a href="#plants">Plants</a>
-      <a href="#purohit">Purohit</a>
-      <a href="#flowers">Flowers</a>
-      <a href="#diya">Diya</a>
-      <a href="#decor">Decor</a>
-    </div>
-  </nav>
-
   <main>
-    <section class="seva" id="bhog" aria-labelledby="bhog-title">
-      <img class="scene" src="assets/scene-bhog.jpg" width="1074" height="749" alt="Bhog on a brass thali: khichuri, payesh, fried slices, marigold, and a lit clay lamp.">
-      <div class="wrap">
-        <h2 id="bhog-title">Bhog and Prasadam</h2>
-        <p class="bn">ভোগ ও প্রসাদ</p>
-        <p class="lead">Food and prasadam. ₹100 a person.</p>
-        <div class="rows">
-          <button type="button" class="tier" data-seva="Bhog and Prasadam" data-detail="20 persons" data-amount="2000" data-note="Kali Puja 2026 Bhog 20 persons"><span class="tier-name">20 persons</span><span class="tier-price">₹2,000</span></button>
-          <button type="button" class="tier" data-seva="Bhog and Prasadam" data-detail="50 persons" data-amount="5000" data-note="Kali Puja 2026 Bhog 50 persons"><span class="tier-name">50 persons</span><span class="tier-price">₹5,000</span></button>
-          <button type="button" class="tier" data-seva="Bhog and Prasadam" data-detail="100 persons" data-amount="10000" data-note="Kali Puja 2026 Bhog 100 persons"><span class="tier-name">100 persons</span><span class="tier-price">₹10,000</span></button>
-          <button type="button" class="tier" data-seva="Bhog and Prasadam" data-detail="200 persons" data-amount="20000" data-note="Kali Puja 2026 Bhog 200 persons"><span class="tier-name">200 persons</span><span class="tier-price">₹20,000</span></button>
+    <!-- 1. Bhog -->
+    <section class="seva" id="bhog" data-scene style="--n:4" aria-labelledby="bhog-title">
+      <div class="stage">
+        <div class="seva-head">
+          <p class="kicker">Seva 1 of 8</p>
+          <h2 id="bhog-title">Bhog and Prasadam</h2>
+          <p class="bn" lang="bn">ভোগ ও প্রসাদ</p>
+          <p class="lead">Food and prasadam. <mark class="hl">₹100 a person.</mark></p>
+        </div>
+        <figure class="scene-photo"><img src="assets/scene-bhog.jpg" width="1074" height="749" alt="Bhog on a brass thali: khichuri, payesh, fried slices, marigold, and a lit clay lamp." loading="lazy"></figure>
+        <div class="ring" role="group" aria-labelledby="bhog-title">
+          <div class="ring-core core-price" aria-hidden="true">
+            <span class="core-big">₹100</span>
+            <span class="core-sub">a person</span>
+            <span class="core-bn" lang="bn">প্রতি জন</span>
+          </div>
+          <button type="button" class="tier" style="--i:0" data-seva="Bhog and Prasadam" data-detail="20 persons" data-amount="2000" data-includes="Bhog and prasad for 20 devotees|₹100 a person × 20 people" data-note="Kali Puja 2026 Bhog 20 persons"><span class="tier-name">20 persons</span><span class="tier-price">₹2,000</span><span class="tier-math">20 × ₹100</span></button>
+          <button type="button" class="tier" style="--i:1" data-seva="Bhog and Prasadam" data-detail="50 persons" data-amount="5000" data-includes="Bhog and prasad for 50 devotees|₹100 a person × 50 people" data-note="Kali Puja 2026 Bhog 50 persons"><span class="tier-name">50 persons</span><span class="tier-price">₹5,000</span><span class="tier-math">50 × ₹100</span></button>
+          <button type="button" class="tier" style="--i:2" data-seva="Bhog and Prasadam" data-detail="100 persons" data-amount="10000" data-includes="Bhog and prasad for 100 devotees|₹100 a person × 100 people" data-note="Kali Puja 2026 Bhog 100 persons"><span class="tier-name">100 persons</span><span class="tier-price">₹10,000</span><span class="tier-math">100 × ₹100</span></button>
+          <button type="button" class="tier" style="--i:3" data-seva="Bhog and Prasadam" data-detail="200 persons" data-amount="20000" data-includes="Bhog and prasad for 200 devotees|₹100 a person × 200 people" data-note="Kali Puja 2026 Bhog 200 persons"><span class="tier-name">200 persons</span><span class="tier-price">₹20,000</span><span class="tier-math">200 × ₹100</span></button>
         </div>
       </div>
     </section>
 
-    <section class="seva" id="pratima" aria-labelledby="pratima-title">
-      <img class="scene scene-full" src="assets/temple-pratima.jpg" width="1140" height="1127" alt="The Maa Kali pratima at KarmYog Ashram and Mandir.">
-      <div class="wrap">
-        <h2 id="pratima-title">Maa Kali Pratima</h2>
-        <p class="bn">মা কালী প্রতিমা</p>
-        <p class="lead">Idol sponsorship.</p>
-        <div class="rows">
-          <button type="button" class="tier" data-seva="Maa Kali Pratima" data-detail="Idol sponsorship" data-amount="2000" data-note="Kali Puja 2026 Idol"><span class="tier-name">Idol sponsorship</span><span class="tier-price">₹2,000</span></button>
-          <button type="button" class="tier" data-seva="Maa Kali Pratima" data-detail="Idol sponsorship" data-amount="5000" data-note="Kali Puja 2026 Idol"><span class="tier-name">Idol sponsorship</span><span class="tier-price">₹5,000</span></button>
-          <button type="button" class="tier" data-seva="Maa Kali Pratima" data-detail="Idol sponsorship" data-amount="10000" data-note="Kali Puja 2026 Idol"><span class="tier-name">Idol sponsorship</span><span class="tier-price">₹10,000</span></button>
-          <button type="button" class="tier" data-seva="Maa Kali Pratima" data-detail="Idol sponsorship" data-amount="15000" data-note="Kali Puja 2026 Idol"><span class="tier-name">Idol sponsorship</span><span class="tier-price">₹15,000</span></button>
-          <button type="button" class="tier" data-seva="Maa Kali Pratima" data-detail="Idol sponsorship" data-amount="20000" data-note="Kali Puja 2026 Idol"><span class="tier-name">Idol sponsorship</span><span class="tier-price">₹20,000</span></button>
+    <!-- 2. Pratima -->
+    <section class="seva seva-pratima" id="pratima" data-scene style="--n:5" aria-labelledby="pratima-title">
+      <div class="stage">
+        <div class="seva-head">
+          <p class="kicker">Seva 2 of 8</p>
+          <h2 id="pratima-title">Maa Kali Pratima</h2>
+          <p class="bn" lang="bn">মা কালী প্রতিমা</p>
+          <p class="lead">Idol sponsorship.</p>
+        </div>
+        <figure class="scene-photo"><img src="assets/temple-pratima.jpg" width="1140" height="1127" alt="The Maa Kali pratima at KarmYog Ashram and Mandir." loading="lazy"></figure>
+        <div class="ring" role="group" aria-labelledby="pratima-title">
+          <div class="ring-core core-photo" aria-hidden="true">
+            <span class="halo"></span>
+            <img src="assets/temple-pratima.jpg" alt="" width="1140" height="1127" loading="lazy">
+          </div>
+          <button type="button" class="tier" style="--i:0" data-seva="Maa Kali Pratima" data-detail="Idol sponsorship" data-amount="2000" data-note="Kali Puja 2026 Idol"><span class="tier-name">Pratima</span><span class="tier-price">₹2,000</span></button>
+          <button type="button" class="tier" style="--i:1" data-seva="Maa Kali Pratima" data-detail="Idol sponsorship" data-amount="5000" data-note="Kali Puja 2026 Idol"><span class="tier-name">Pratima</span><span class="tier-price">₹5,000</span></button>
+          <button type="button" class="tier" style="--i:2" data-seva="Maa Kali Pratima" data-detail="Idol sponsorship" data-amount="10000" data-note="Kali Puja 2026 Idol"><span class="tier-name">Pratima</span><span class="tier-price">₹10,000</span></button>
+          <button type="button" class="tier" style="--i:3" data-seva="Maa Kali Pratima" data-detail="Idol sponsorship" data-amount="15000" data-note="Kali Puja 2026 Idol"><span class="tier-name">Pratima</span><span class="tier-price">₹15,000</span></button>
+          <button type="button" class="tier" style="--i:4" data-seva="Maa Kali Pratima" data-detail="Idol sponsorship" data-amount="20000" data-note="Kali Puja 2026 Idol"><span class="tier-name">Pratima</span><span class="tier-price">₹20,000</span></button>
         </div>
       </div>
     </section>
 
-    <section class="seva" id="pandal" aria-labelledby="pandal-title">
-      <img class="scene scene-full" src="assets/temple-night.jpg" width="1280" height="960" alt="The illuminated grounds of KarmYog Ashram and Mandir at night.">
-      <div class="wrap">
-        <h2 id="pandal-title">Pandal and Illumination</h2>
-        <p class="bn">মণ্ডপ ও আলো</p>
-        <p class="lead">Pandal and lighting.</p>
-        <div class="rows">
-          <button type="button" class="tier" data-seva="Pandal and Illumination" data-detail="Pandal and lighting" data-amount="10000" data-note="Kali Puja 2026 Pandal"><span class="tier-name">Pandal and lighting</span><span class="tier-price">₹10,000</span></button>
-          <button type="button" class="tier" data-seva="Pandal and Illumination" data-detail="Pandal and lighting" data-amount="20000" data-note="Kali Puja 2026 Pandal"><span class="tier-name">Pandal and lighting</span><span class="tier-price">₹20,000</span></button>
-          <button type="button" class="tier" data-seva="Pandal and Illumination" data-detail="Pandal and lighting" data-amount="30000" data-note="Kali Puja 2026 Pandal"><span class="tier-name">Pandal and lighting</span><span class="tier-price">₹30,000</span></button>
-          <button type="button" class="tier" data-seva="Pandal and Illumination" data-detail="Pandal and lighting" data-amount="40000" data-note="Kali Puja 2026 Pandal"><span class="tier-name">Pandal and lighting</span><span class="tier-price">₹40,000</span></button>
+    <!-- 3. Pandal -->
+    <section class="seva" id="pandal" data-scene style="--n:4" aria-labelledby="pandal-title">
+      <div class="stage">
+        <div class="seva-head">
+          <p class="kicker">Seva 3 of 8</p>
+          <h2 id="pandal-title">Pandal and Illumination</h2>
+          <p class="bn" lang="bn">মণ্ডপ ও আলো</p>
+          <p class="lead">Pandal and lighting.</p>
+        </div>
+        <figure class="scene-photo"><img src="assets/temple-night.jpg" width="1280" height="960" alt="The illuminated grounds of KarmYog Ashram and Mandir at night." loading="lazy"></figure>
+        <div class="ring" role="group" aria-labelledby="pandal-title">
+          <div class="ring-core core-photo" aria-hidden="true">
+            <span class="halo"></span>
+            <img src="assets/temple-night.jpg" alt="" width="1280" height="960" loading="lazy">
+          </div>
+          <button type="button" class="tier" style="--i:0" data-seva="Pandal and Illumination" data-detail="Pandal and lighting" data-amount="10000" data-note="Kali Puja 2026 Pandal"><span class="tier-name">Pandal</span><span class="tier-price">₹10,000</span></button>
+          <button type="button" class="tier" style="--i:1" data-seva="Pandal and Illumination" data-detail="Pandal and lighting" data-amount="20000" data-note="Kali Puja 2026 Pandal"><span class="tier-name">Pandal</span><span class="tier-price">₹20,000</span></button>
+          <button type="button" class="tier" style="--i:2" data-seva="Pandal and Illumination" data-detail="Pandal and lighting" data-amount="30000" data-note="Kali Puja 2026 Pandal"><span class="tier-name">Pandal</span><span class="tier-price">₹30,000</span></button>
+          <button type="button" class="tier" style="--i:3" data-seva="Pandal and Illumination" data-detail="Pandal and lighting" data-amount="40000" data-note="Kali Puja 2026 Pandal"><span class="tier-name">Pandal</span><span class="tier-price">₹40,000</span></button>
         </div>
       </div>
     </section>
 
-    <section class="seva" id="plants" aria-labelledby="plants-title">
-      <img class="scene" src="assets/scene-plants.jpg" width="1074" height="749" alt="Tulsi and leafy plants in brass and clay pots along a temple courtyard wall.">
-      <div class="wrap">
-        <h2 id="plants-title">Divine Plants</h2>
-        <p class="bn">মাসিক উদ্ভিদ সেবা</p>
-        <p class="lead">Monthly plant sponsorship.</p>
-        <div class="chips">
-          <button type="button" class="tier" data-seva="Divine Plants" data-detail="Monthly plant sponsorship" data-amount="500" data-note="Kali Puja 2026 Plants"><span class="tier-price">₹500</span></button>
-          <button type="button" class="tier" data-seva="Divine Plants" data-detail="Monthly plant sponsorship" data-amount="1000" data-note="Kali Puja 2026 Plants"><span class="tier-price">₹1,000</span></button>
-          <button type="button" class="tier" data-seva="Divine Plants" data-detail="Monthly plant sponsorship" data-amount="1500" data-note="Kali Puja 2026 Plants"><span class="tier-price">₹1,500</span></button>
-          <button type="button" class="tier" data-seva="Divine Plants" data-detail="Monthly plant sponsorship" data-amount="2000" data-note="Kali Puja 2026 Plants"><span class="tier-price">₹2,000</span></button>
+    <!-- 4. Plants -->
+    <section class="seva" id="plants" data-scene style="--n:4" aria-labelledby="plants-title">
+      <div class="stage">
+        <div class="seva-head">
+          <p class="kicker">Seva 4 of 8</p>
+          <h2 id="plants-title">Divine Plants</h2>
+          <p class="bn" lang="bn">মাসিক উদ্ভিদ সেবা</p>
+          <p class="lead">Monthly plant sponsorship.</p>
+        </div>
+        <figure class="scene-photo"><img src="assets/scene-plants.jpg" width="1074" height="749" alt="Tulsi and leafy plants in brass and clay pots along a temple courtyard wall." loading="lazy"></figure>
+        <div class="ring" role="group" aria-labelledby="plants-title">
+          <div class="ring-core core-text" aria-hidden="true">
+            <span class="core-bn" lang="bn">মাসিক</span>
+            <span class="core-sub">every month</span>
+          </div>
+          <button type="button" class="tier" style="--i:0" data-seva="Divine Plants" data-detail="Monthly plant sponsorship" data-amount="500" data-note="Kali Puja 2026 Plants"><span class="tier-name">Monthly</span><span class="tier-price">₹500</span></button>
+          <button type="button" class="tier" style="--i:1" data-seva="Divine Plants" data-detail="Monthly plant sponsorship" data-amount="1000" data-note="Kali Puja 2026 Plants"><span class="tier-name">Monthly</span><span class="tier-price">₹1,000</span></button>
+          <button type="button" class="tier" style="--i:2" data-seva="Divine Plants" data-detail="Monthly plant sponsorship" data-amount="1500" data-note="Kali Puja 2026 Plants"><span class="tier-name">Monthly</span><span class="tier-price">₹1,500</span></button>
+          <button type="button" class="tier" style="--i:3" data-seva="Divine Plants" data-detail="Monthly plant sponsorship" data-amount="2000" data-note="Kali Puja 2026 Plants"><span class="tier-name">Monthly</span><span class="tier-price">₹2,000</span></button>
         </div>
       </div>
     </section>
 
-    <section class="seva" id="purohit" aria-labelledby="purohit-title">
-      <img class="scene" src="assets/scene-purohit.jpg" width="1074" height="749" alt="A purohit seen from behind, offering into a small fire in a temple courtyard at dusk.">
-      <div class="wrap">
-        <h2 id="purohit-title">Purohit Seva</h2>
-        <p class="bn">পুরোহিত সেবা</p>
-        <p class="lead">Priest service and dakshina.</p>
-        <div class="chips">
-          <button type="button" class="tier" data-seva="Purohit Seva" data-detail="Priest service and dakshina" data-amount="1000" data-note="Kali Puja 2026 Purohit"><span class="tier-price">₹1,000</span></button>
-          <button type="button" class="tier" data-seva="Purohit Seva" data-detail="Priest service and dakshina" data-amount="2000" data-note="Kali Puja 2026 Purohit"><span class="tier-price">₹2,000</span></button>
-          <button type="button" class="tier" data-seva="Purohit Seva" data-detail="Priest service and dakshina" data-amount="3000" data-note="Kali Puja 2026 Purohit"><span class="tier-price">₹3,000</span></button>
-          <button type="button" class="tier" data-seva="Purohit Seva" data-detail="Priest service and dakshina" data-amount="4000" data-note="Kali Puja 2026 Purohit"><span class="tier-price">₹4,000</span></button>
+    <!-- 5. Purohit -->
+    <section class="seva" id="purohit" data-scene style="--n:4" aria-labelledby="purohit-title">
+      <div class="stage">
+        <div class="seva-head">
+          <p class="kicker">Seva 5 of 8</p>
+          <h2 id="purohit-title">Purohit Seva</h2>
+          <p class="bn" lang="bn">পুরোহিত সেবা</p>
+          <p class="lead">Priest service and dakshina.</p>
+        </div>
+        <figure class="scene-photo"><img src="assets/scene-purohit.jpg" width="1074" height="749" alt="A purohit seen from behind, offering into a small fire in a temple courtyard at dusk." loading="lazy"></figure>
+        <div class="ring" role="group" aria-labelledby="purohit-title">
+          <div class="ring-core core-text" aria-hidden="true">
+            <span class="core-bn" lang="bn">দক্ষিণা</span>
+            <span class="core-sub">dakshina</span>
+          </div>
+          <button type="button" class="tier" style="--i:0" data-seva="Purohit Seva" data-detail="Priest service and dakshina" data-amount="1000" data-note="Kali Puja 2026 Purohit"><span class="tier-name">Purohit</span><span class="tier-price">₹1,000</span></button>
+          <button type="button" class="tier" style="--i:1" data-seva="Purohit Seva" data-detail="Priest service and dakshina" data-amount="2000" data-note="Kali Puja 2026 Purohit"><span class="tier-name">Purohit</span><span class="tier-price">₹2,000</span></button>
+          <button type="button" class="tier" style="--i:2" data-seva="Purohit Seva" data-detail="Priest service and dakshina" data-amount="3000" data-note="Kali Puja 2026 Purohit"><span class="tier-name">Purohit</span><span class="tier-price">₹3,000</span></button>
+          <button type="button" class="tier" style="--i:3" data-seva="Purohit Seva" data-detail="Priest service and dakshina" data-amount="4000" data-note="Kali Puja 2026 Purohit"><span class="tier-name">Purohit</span><span class="tier-price">₹4,000</span></button>
         </div>
       </div>
     </section>
 
-    <section class="seva" id="flowers" aria-labelledby="flowers-title">
-      <img class="scene" src="assets/scene-flowers.jpg" width="1074" height="749" alt="Hibiscus, jasmine, and marigold in a brass plate on red silk.">
-      <div class="wrap">
-        <h2 id="flowers-title">Pushpanjali and Floral Seva</h2>
-        <p class="bn">পুষ্পাঞ্জলি</p>
-        <p class="lead">Offer the amount you wish.</p>
-        <div class="rows">
-          <button type="button" class="tier" data-seva="Individual Pushpanjali Seva" data-detail="Offer the amount you wish" data-amount="" data-note="Kali Puja 2026 Pushpanjali"><span class="tier-name">Individual Pushpanjali Seva</span><span class="tier-price">Any amount</span></button>
-          <button type="button" class="tier" data-seva="Floral Offering" data-detail="Offer the amount you wish" data-amount="" data-note="Kali Puja 2026 Floral offering"><span class="tier-name">Floral Offering</span><span class="tier-price">Any amount</span></button>
-          <button type="button" class="tier" data-seva="Special Pushparghya Seva" data-detail="Offer the amount you wish" data-amount="" data-note="Kali Puja 2026 Pushparghya"><span class="tier-name">Special Pushparghya Seva</span><span class="tier-price">Any amount</span></button>
+    <!-- 6. Pushpanjali -->
+    <section class="seva seva-open" id="flowers" data-scene style="--n:3" aria-labelledby="flowers-title">
+      <div class="stage">
+        <div class="seva-head">
+          <p class="kicker">Seva 6 of 8</p>
+          <h2 id="flowers-title">Pushpanjali and Floral Seva</h2>
+          <p class="bn" lang="bn">পুষ্পাঞ্জলি</p>
+          <p class="lead">Offer the amount you wish.</p>
+        </div>
+        <figure class="scene-photo"><img src="assets/scene-flowers.jpg" width="1074" height="749" alt="Hibiscus, jasmine, and marigold in a brass plate on red silk." loading="lazy"></figure>
+        <div class="ring" role="group" aria-labelledby="flowers-title">
+          <div class="ring-core core-text" aria-hidden="true">
+            <span class="core-bn" lang="bn">যেকোনো</span>
+            <span class="core-sub">any amount</span>
+          </div>
+          <button type="button" class="tier" style="--i:0" data-seva="Individual Pushpanjali Seva" data-detail="Offer the amount you wish" data-amount="" data-note="Kali Puja 2026 Pushpanjali"><span class="tier-name">Individual Pushpanjali Seva</span><span class="tier-price">Any amount</span></button>
+          <button type="button" class="tier" style="--i:1" data-seva="Floral Offering" data-detail="Offer the amount you wish" data-amount="" data-note="Kali Puja 2026 Floral offering"><span class="tier-name">Floral Offering</span><span class="tier-price">Any amount</span></button>
+          <button type="button" class="tier" style="--i:2" data-seva="Special Pushparghya Seva" data-detail="Offer the amount you wish" data-amount="" data-note="Kali Puja 2026 Pushparghya"><span class="tier-name">Special Pushparghya Seva</span><span class="tier-price">Any amount</span></button>
         </div>
       </div>
     </section>
 
-    <section class="seva" id="diya" aria-labelledby="diya-title">
-      <img class="scene" src="assets/scene-diyas.jpg" width="1074" height="749" alt="Rows of lit clay diyas on temple steps at dusk, with marigold petals and a brass bell.">
-      <div class="wrap">
-        <h2 id="diya-title">Deepdaan</h2>
-        <p class="bn">দীপদান</p>
-        <p class="lead">Offering of light.</p>
-        <div class="chips">
-          <button type="button" class="tier" data-seva="Deepdaan" data-detail="Diya sponsorship" data-amount="500" data-note="Kali Puja 2026 Deepdaan"><span class="tier-price">₹500</span></button>
-          <button type="button" class="tier" data-seva="Deepdaan" data-detail="Diya sponsorship" data-amount="1000" data-note="Kali Puja 2026 Deepdaan"><span class="tier-price">₹1,000</span></button>
-          <button type="button" class="tier" data-seva="Deepdaan" data-detail="Diya sponsorship" data-amount="1500" data-note="Kali Puja 2026 Deepdaan"><span class="tier-price">₹1,500</span></button>
-          <button type="button" class="tier" data-seva="Deepdaan" data-detail="Diya sponsorship" data-amount="2000" data-note="Kali Puja 2026 Deepdaan"><span class="tier-price">₹2,000</span></button>
+    <!-- 7. Deepdaan -->
+    <section class="seva" id="diya" data-scene style="--n:4" aria-labelledby="diya-title">
+      <div class="stage">
+        <div class="seva-head">
+          <p class="kicker">Seva 7 of 8</p>
+          <h2 id="diya-title">Deepdaan</h2>
+          <p class="bn" lang="bn">দীপদান</p>
+          <p class="lead">Offering of light.</p>
+        </div>
+        <figure class="scene-photo"><img src="assets/scene-diyas.jpg" width="1074" height="749" alt="Rows of lit clay diyas on temple steps at dusk, with marigold petals and a brass bell." loading="lazy"></figure>
+        <div class="ring" role="group" aria-labelledby="diya-title">
+          <div class="ring-core core-flame" aria-hidden="true">
+            <span class="flame"></span>
+            <span class="core-sub">light a diya</span>
+          </div>
+          <button type="button" class="tier" style="--i:0" data-seva="Deepdaan" data-detail="Diya sponsorship" data-amount="500" data-note="Kali Puja 2026 Deepdaan"><span class="tier-name">Diya</span><span class="tier-price">₹500</span></button>
+          <button type="button" class="tier" style="--i:1" data-seva="Deepdaan" data-detail="Diya sponsorship" data-amount="1000" data-note="Kali Puja 2026 Deepdaan"><span class="tier-name">Diya</span><span class="tier-price">₹1,000</span></button>
+          <button type="button" class="tier" style="--i:2" data-seva="Deepdaan" data-detail="Diya sponsorship" data-amount="1500" data-note="Kali Puja 2026 Deepdaan"><span class="tier-name">Diya</span><span class="tier-price">₹1,500</span></button>
+          <button type="button" class="tier" style="--i:3" data-seva="Deepdaan" data-detail="Diya sponsorship" data-amount="2000" data-note="Kali Puja 2026 Deepdaan"><span class="tier-name">Diya</span><span class="tier-price">₹2,000</span></button>
         </div>
       </div>
     </section>
 
-    <section class="seva" id="decor" aria-labelledby="decor-title">
-      <img class="scene" src="assets/scene-decor.jpg" width="1074" height="749" alt="A temple pillar tied with red and gold cloth, an alpana on the floor, and hanging marigold.">
-      <div class="wrap">
-        <h2 id="decor-title">Decoration and Seva Support</h2>
-        <p class="bn">সাজসজ্জা</p>
-        <p class="lead">Festival decoration and support.</p>
-        <div class="chips">
-          <button type="button" class="tier" data-seva="Decoration and Seva Support" data-detail="Festival decoration and support" data-amount="500" data-note="Kali Puja 2026 Decoration"><span class="tier-price">₹500</span></button>
-          <button type="button" class="tier" data-seva="Decoration and Seva Support" data-detail="Festival decoration and support" data-amount="1000" data-note="Kali Puja 2026 Decoration"><span class="tier-price">₹1,000</span></button>
-          <button type="button" class="tier" data-seva="Decoration and Seva Support" data-detail="Festival decoration and support" data-amount="2000" data-note="Kali Puja 2026 Decoration"><span class="tier-price">₹2,000</span></button>
-          <button type="button" class="tier" data-seva="Decoration and Seva Support" data-detail="Festival decoration and support" data-amount="5000" data-note="Kali Puja 2026 Decoration"><span class="tier-price">₹5,000</span></button>
+    <!-- 8. Decoration -->
+    <section class="seva" id="decor" data-scene style="--n:4" aria-labelledby="decor-title">
+      <div class="stage">
+        <div class="seva-head">
+          <p class="kicker">Seva 8 of 8</p>
+          <h2 id="decor-title">Decoration and Seva Support</h2>
+          <p class="bn" lang="bn">সাজসজ্জা</p>
+          <p class="lead">Festival decoration and support.</p>
+        </div>
+        <figure class="scene-photo"><img src="assets/scene-decor.jpg" width="1074" height="749" alt="A temple pillar tied with red and gold cloth, an alpana on the floor, and hanging marigold." loading="lazy"></figure>
+        <div class="ring" role="group" aria-labelledby="decor-title">
+          <div class="ring-core core-text" aria-hidden="true">
+            <span class="core-bn" lang="bn">সাজ</span>
+            <span class="core-sub">decoration</span>
+          </div>
+          <button type="button" class="tier" style="--i:0" data-seva="Decoration and Seva Support" data-detail="Festival decoration and support" data-amount="500" data-note="Kali Puja 2026 Decoration"><span class="tier-name">Decor</span><span class="tier-price">₹500</span></button>
+          <button type="button" class="tier" style="--i:1" data-seva="Decoration and Seva Support" data-detail="Festival decoration and support" data-amount="1000" data-note="Kali Puja 2026 Decoration"><span class="tier-name">Decor</span><span class="tier-price">₹1,000</span></button>
+          <button type="button" class="tier" style="--i:2" data-seva="Decoration and Seva Support" data-detail="Festival decoration and support" data-amount="2000" data-note="Kali Puja 2026 Decoration"><span class="tier-name">Decor</span><span class="tier-price">₹2,000</span></button>
+          <button type="button" class="tier" style="--i:3" data-seva="Decoration and Seva Support" data-detail="Festival decoration and support" data-amount="5000" data-note="Kali Puja 2026 Decoration"><span class="tier-name">Decor</span><span class="tier-price">₹5,000</span></button>
         </div>
       </div>
     </section>
 
-    <section class="close-band">
+    <section class="close-band" aria-label="Closing words">
       <div class="wrap">
-        <p>Every offering is an expression of devotion. Every contribution helps create a celebration filled with faith, light and togetherness.</p>
-        <p>Let us come together to make Kali Puja 2026 divine and memorable.</p>
+        <p class="reveal-words">Every offering is an expression of devotion. Every contribution helps create a celebration filled with faith, light and togetherness.</p>
+        <p class="reveal-words">Let us come together to make Kali Puja 2026 divine and memorable.</p>
       </div>
     </section>
   </main>
 
   <section class="offering" id="pay" aria-labelledby="pay-title">
-    <div class="wrap">
-      <h2 id="pay-title">Offer it here</h2>
-      <p class="bn">সেবা</p>
-      <p class="lead">Choose a seva above and the amount opens in your UPI app. Or scan this Canara Bank QR and type the rupees yourself.</p>
-      <figure class="qr-card">
-        <img src="assets/canara-upi.png" width="421" height="591" alt="Canara Bank scan and pay QR for UPI ID 230608554002875@cnrb">
-        <figcaption class="payee">Canara Bank. The app shows the account name <strong>KarmYog for 21st Century Foundation</strong>. UPI ID <code>230608554002875@cnrb</code></figcaption>
+    <div class="wrap offering-grid">
+      <div class="offer-copy">
+        <p class="kicker"><span lang="bn">অর্পণ</span> · The offering</p>
+        <h2 id="pay-title">Make your offering to Maa</h2>
+        <p class="lead">Choose a seva above and your UPI app opens with the amount filled in. Or scan this Canara Bank QR and type the rupees yourself.</p>
+        <div class="cta-row">
+          <a class="btn btn-glow btn-lg" href="#sevas">Choose a seva</a>
+          <button type="button" class="btn btn-ghost btn-lg" id="copy-upi-cta">Copy UPI ID</button>
+        </div>
+        <p class="payee">Canara Bank. The app shows the account name <strong>KarmYog for 21st Century Foundation</strong>. UPI ID <code>230608554002875@cnrb</code></p>
+      </div>
+      <figure class="qr-halo">
+        <div class="qr-frame">
+          <div class="qr-card">
+            <img src="assets/canara-upi.png" width="421" height="591" alt="Canara Bank scan and pay QR for UPI ID 230608554002875@cnrb" loading="lazy">
+          </div>
+        </div>
+        <figcaption>Scan with any UPI app</figcaption>
       </figure>
     </div>
   </section>
@@ -202,7 +302,7 @@
         <div class="dock-label" id="dock-label"></div>
         <div class="dock-amount" id="dock-amount"></div>
       </div>
-      <button type="button" class="btn" id="dock-pay">Offer</button>
+      <button type="button" class="btn btn-glow" id="dock-pay">Offer</button>
     </div>
   </div>
 
@@ -216,9 +316,25 @@
         </div>
         <button type="button" class="text-btn" id="dialog-close">Close</button>
       </div>
-      <figure class="qr-card dialog-qr">
+      <div class="offer-summary" id="offer-summary">
+        <p class="offer-amount" id="offer-amount"></p>
+        <div class="offer-covers" id="offer-covers" hidden>
+          <p class="offer-covers-title">What your offering covers</p>
+          <ul id="offer-includes"></ul>
+        </div>
+      </div>
+      <figure class="qr-card dialog-qr" id="dialog-qr">
         <img src="assets/canara-upi.png" width="421" height="591" alt="Canara Bank QR for 230608554002875@cnrb">
       </figure>
+      <div class="amount-qr" id="amount-qr" hidden>
+        <p class="amount-qr-kicker">Scan to offer</p>
+        <p class="amount-qr-sum" id="amount-qr-sum"></p>
+        <div class="amount-qr-frame">
+          <div class="amount-qr-code" id="amount-qr-code" role="img"></div>
+        </div>
+        <p class="amount-qr-help">Scan with GPay, PhonePe, Paytm or any UPI app. The amount is already filled in. Check that the name reads <strong>KarmYog for 21st Century Foundation</strong> before you pay.</p>
+        <button type="button" class="text-btn" id="amount-qr-back">Change amount</button>
+      </div>
       <div class="amount-field" id="amount-field" hidden>
         <label for="amount-input">Amount in rupees</label>
         <input id="amount-input" name="amount" type="text" inputmode="numeric" autocomplete="off">
@@ -232,11 +348,14 @@
       <p class="fine">On this phone, offer in the UPI app. From a computer, scan the QR. Confirm KarmYog for 21st Century Foundation before you pay.</p>
       </div>
       <div class="dialog-actions">
-        <button type="submit" class="btn" id="pay-go">Pay in UPI app</button>
+        <button type="submit" class="btn btn-glow" id="pay-go">Pay in UPI app</button>
       </div>
     </form>
   </dialog>
 
+  <script src="smoke.js"></script>
+  <script src="vendor/qrcode.js"></script>
   <script src="app.js"></script>
+  <script src="scenes.js"></script>
 </body>
 </html>
