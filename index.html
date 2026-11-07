@@ -90,10 +90,10 @@
             <span class="core-sub">a person</span>
             <span class="core-bn" lang="bn">প্রতি জন</span>
           </div>
-          <button type="button" class="tier" style="--i:0" data-seva="Bhog and Prasadam" data-detail="20 persons" data-amount="2000" data-note="Kali Puja 2026 Bhog 20 persons"><span class="tier-name">20 persons</span><span class="tier-price">₹2,000</span><span class="tier-math">20 × ₹100</span></button>
-          <button type="button" class="tier" style="--i:1" data-seva="Bhog and Prasadam" data-detail="50 persons" data-amount="5000" data-note="Kali Puja 2026 Bhog 50 persons"><span class="tier-name">50 persons</span><span class="tier-price">₹5,000</span><span class="tier-math">50 × ₹100</span></button>
-          <button type="button" class="tier" style="--i:2" data-seva="Bhog and Prasadam" data-detail="100 persons" data-amount="10000" data-note="Kali Puja 2026 Bhog 100 persons"><span class="tier-name">100 persons</span><span class="tier-price">₹10,000</span><span class="tier-math">100 × ₹100</span></button>
-          <button type="button" class="tier" style="--i:3" data-seva="Bhog and Prasadam" data-detail="200 persons" data-amount="20000" data-note="Kali Puja 2026 Bhog 200 persons"><span class="tier-name">200 persons</span><span class="tier-price">₹20,000</span><span class="tier-math">200 × ₹100</span></button>
+          <button type="button" class="tier" style="--i:0" data-seva="Bhog and Prasadam" data-detail="20 persons" data-amount="2000" data-includes="Bhog and prasad for 20 devotees|₹100 a person × 20 people" data-note="Kali Puja 2026 Bhog 20 persons"><span class="tier-name">20 persons</span><span class="tier-price">₹2,000</span><span class="tier-math">20 × ₹100</span></button>
+          <button type="button" class="tier" style="--i:1" data-seva="Bhog and Prasadam" data-detail="50 persons" data-amount="5000" data-includes="Bhog and prasad for 50 devotees|₹100 a person × 50 people" data-note="Kali Puja 2026 Bhog 50 persons"><span class="tier-name">50 persons</span><span class="tier-price">₹5,000</span><span class="tier-math">50 × ₹100</span></button>
+          <button type="button" class="tier" style="--i:2" data-seva="Bhog and Prasadam" data-detail="100 persons" data-amount="10000" data-includes="Bhog and prasad for 100 devotees|₹100 a person × 100 people" data-note="Kali Puja 2026 Bhog 100 persons"><span class="tier-name">100 persons</span><span class="tier-price">₹10,000</span><span class="tier-math">100 × ₹100</span></button>
+          <button type="button" class="tier" style="--i:3" data-seva="Bhog and Prasadam" data-detail="200 persons" data-amount="20000" data-includes="Bhog and prasad for 200 devotees|₹100 a person × 200 people" data-note="Kali Puja 2026 Bhog 200 persons"><span class="tier-name">200 persons</span><span class="tier-price">₹20,000</span><span class="tier-math">200 × ₹100</span></button>
         </div>
       </div>
     </section>
@@ -316,9 +316,25 @@
         </div>
         <button type="button" class="text-btn" id="dialog-close">Close</button>
       </div>
-      <figure class="qr-card dialog-qr">
+      <div class="offer-summary" id="offer-summary">
+        <p class="offer-amount" id="offer-amount"></p>
+        <div class="offer-covers" id="offer-covers" hidden>
+          <p class="offer-covers-title">What your offering covers</p>
+          <ul id="offer-includes"></ul>
+        </div>
+      </div>
+      <figure class="qr-card dialog-qr" id="dialog-qr">
         <img src="assets/canara-upi.png" width="421" height="591" alt="Canara Bank QR for 230608554002875@cnrb">
       </figure>
+      <div class="amount-qr" id="amount-qr" hidden>
+        <p class="amount-qr-kicker">Scan to offer</p>
+        <p class="amount-qr-sum" id="amount-qr-sum"></p>
+        <div class="amount-qr-frame">
+          <div class="amount-qr-code" id="amount-qr-code" role="img"></div>
+        </div>
+        <p class="amount-qr-help">Scan with GPay, PhonePe, Paytm or any UPI app. The amount is already filled in. Check that the name reads <strong>KarmYog for 21st Century Foundation</strong> before you pay.</p>
+        <button type="button" class="text-btn" id="amount-qr-back">Change amount</button>
+      </div>
       <div class="amount-field" id="amount-field" hidden>
         <label for="amount-input">Amount in rupees</label>
         <input id="amount-input" name="amount" type="text" inputmode="numeric" autocomplete="off">
@@ -338,6 +354,7 @@
   </dialog>
 
   <script src="smoke.js"></script>
+  <script src="vendor/qrcode.js"></script>
   <script src="app.js"></script>
   <script src="scenes.js"></script>
 </body>
